@@ -42,7 +42,7 @@ app.put("/repositories/:id", (request, response) => {
 
   const repository = { ...repositories[repositoryIndex], ...{ title, url, techs } };
 
-  repositories[repositoryIndex] = { ...repositories[repositoryIndex], ...{ title, url, techs } };
+  repositories[repositoryIndex] = repository;
 
   return response.json(repository);
 });
